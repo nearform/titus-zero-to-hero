@@ -9,6 +9,7 @@ import config from './config'
 
 const AsyncLogin = lazy(() => import('./pages/login'))
 const AsyncDashboard = lazy(() => import('./pages/dashboard'))
+const AsyncTodos = lazy(() => import('./pages/todos'))
 
 const PrivateRoute = ({ component: Component, componentProps, ...rest }) => {
   const { isAuthenticated } = useContext(AuthContext)
@@ -71,6 +72,9 @@ const AppRouter = () => {
           exact={true}
           component={AsyncDashboard}
         />
+        <Route path="/todos">
+          <AsyncTodos />
+        </Route>
         {renderAdmin(user)}
       </Switch>
     </Router>
