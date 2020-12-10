@@ -9,6 +9,12 @@
 
 ---
 
+# ℹ️ This repo is the support material for the article Titus: From zero to full-stack hero in about an hour.
+
+This repo demonstrates how to add a todo list with a table in the database, an API in the Fastify back-end, and a page in the React front-end.
+
+---
+
 &nbsp;
 
 [![Lerna][lerna-badge]][lerna-link]
