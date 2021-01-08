@@ -4,14 +4,14 @@ import './todo-list.css' // Custom todo list CSS
 const Todo = props => {
   const [checked, setChecked] = useState(Boolean(props.completedAt))
   return (
-    <div className="todo">
+    <label className="todo">
       <input
         type="checkbox"
         checked={checked}
-        onClick={() => setChecked(!checked)}
+        onChange={() => setChecked(!checked)}
       />
-      <span>{props.description}</span>
-    </div>
+      {props.description}
+    </label>
   )
 }
 

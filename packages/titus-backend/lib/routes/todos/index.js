@@ -14,7 +14,7 @@ async function todos(server) {
 
     handler: async (req, res) => {
       // Query the TODOs from the DB
-      const results = await server.pg.query(`SELECT * FROM todo;`)
+      const results = await server.pg.query(`SELECT * FROM todo`)
 
       // Format the queried data to match the API schema
       const todos = results.rows.map(r => ({
