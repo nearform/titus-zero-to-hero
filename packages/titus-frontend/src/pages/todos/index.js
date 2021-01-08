@@ -8,7 +8,7 @@ const Todo = props => {
       <input
         type="checkbox"
         checked={checked}
-        onChange={() => setChecked(!checked)}
+        onChange={() => setChecked(checked => !checked)}
       />
       {props.description}
     </label>
