@@ -25,8 +25,8 @@ describe('todos route', () => {
         {
           id: 123,
           description: 'do stuff',
-          created_at: createdAt,
-          completed_at: completedAt
+          createdAt,
+          completedAt
         }
       ],
       rowCount: 1
