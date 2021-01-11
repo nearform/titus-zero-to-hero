@@ -27,7 +27,7 @@ describe('<TodoList />', () => {
 
     const { getByLabelText } = render(<TodoList />)
 
-    // Get the 2 todos and assert that they are rendered and checked appropriately
+    // Get the 2 todos and assert that they are rendered and checked
     const todo1 = await waitFor(() => getByLabelText('do stuff'))
     const todo2 = await waitFor(() => getByLabelText('do more stuff'))
     expect(todo1).toBeInTheDocument()
