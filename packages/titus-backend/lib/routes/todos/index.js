@@ -1,6 +1,16 @@
 'use strict'
 
-const schemas = require('./schemas')
+const S = require('fluent-schema')
+
+// Schema of a single todo
+const todoSchema = S.object()
+  .prop('id', S.number())
+  .required()
+  .prop('description', S.string())
+  .required()
+  .prop('createdAt', S.string().format(S.FORMATS.DATE_TIME))
+  .required()
+  .prop('completedAt', S.string().format(S.FORMATS.DATE_TIME))
 
 async function todos(server) {
   server.route({
@@ -8,7 +18,11 @@ async function todos(server) {
     url: '/',
     schema: {
       response: {
-        200: schemas.successResponse
+        200: S.object()
+          .prop('data', S.array().items(todoSchema))
+          .required()
+          .prop('count', S.number())
+          .required()
       }
     },
 
