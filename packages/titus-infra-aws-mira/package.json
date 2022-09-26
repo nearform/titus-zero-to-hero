@@ -49,7 +49,7 @@
     "@aws-cdk/aws-secretsmanager": "1.67.0",
     "@aws-cdk/core": "1.67.0",
     "@aws-cdk/custom-resources": "1.67.0",
-    "aws-cdk": "1.67.0",
+    "aws-cdk": "1.174.0",
     "aws-sdk": "^2.806.0",
     "change-case": "^4.1.2",
     "mira": "^1.4.1",
